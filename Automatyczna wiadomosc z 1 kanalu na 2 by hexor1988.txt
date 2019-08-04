@@ -1,0 +1,137 @@
+{
+  "name": "wiadomosc",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "ZpUJG",
+  "actions": [
+    {
+      "comment": "-----------------------------------------------------------------------------------------------",
+      "color": "#ffff80",
+      "name": "Comment"
+    },
+    {
+      "comment": "Tutaj wstawiasz id kana³u na którym gracz wysy³a",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "ID kana³u na którym ma byæ wys³ana wiadomoœæ",
+      "name": "Store Channel Info"
+    },
+    {
+      "storage": "1",
+      "varName": "ID kana³u na którym ma byæ wys³ana wiadomoœæ",
+      "comparison": "1",
+      "value": "ID kana³u na którym ma byæ wys³ana wiadomoœæ",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "comment": "-----------------------------------------------------------------------------------------------",
+      "color": "#ffff80",
+      "name": "Comment"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "comment": "-----------------------------------------------------------------------------------------------",
+      "color": "#ffff80",
+      "name": "Comment"
+    },
+    {
+      "comment": "Tutaj wstawiasz id kana³u na którym bot wysy³a.",
+      "color": "#ff0000",
+      "name": "Comment"
+    },
+    {
+      "info": "0",
+      "find": "ID kana³u bot ma wys³aæ wiadomoœæ",
+      "storage": "1",
+      "varName": "kanalwys",
+      "name": "Find Channel"
+    },
+    {
+      "comment": "-----------------------------------------------------------------------------------------------",
+      "color": "#ffff80",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "nazwa",
+      "name": "Store Member Info"
+    },
+    {
+      "message": "0",
+      "varName": "",
+      "info": "4",
+      "storage": "1",
+      "varName2": "kanal",
+      "name": "Store Message Info"
+    },
+    {
+      "info": "1",
+      "infoIndex": "1",
+      "storage": "1",
+      "varName": "msg",
+      "name": "Store Command Params"
+    },
+    {
+      "title": "Wiadomosc",
+      "author": "${tempVars(\"nazwa\")}",
+      "color": "RANDOM",
+      "url": "",
+      "authorIcon": "${tempVars(\"avatar\")}",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "${tempVars(\"msg\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "5",
+      "varName2": "kanalwys",
+      "storage3": "0",
+      "varName3": "",
+      "name": "Send Embed Message"
+    }
+  ],
+  "comType": "3"
+}
